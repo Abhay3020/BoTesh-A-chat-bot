@@ -6,7 +6,6 @@ import cors from 'cors';
 import { createClient } from '@supabase/supabase-js';
 import { handleChat as originalHandleChat } from './controllers/chatController.js';
 import multer from 'multer';
-import fetch from 'node-fetch';
 import { Request } from 'express';
 
 // Initialize Express app
@@ -39,9 +38,9 @@ async function searchWeb(query: string): Promise<string[]> {
     headers: { 'Accept': 'application/json', 'X-Subscription-Token': BRAVE_SEARCH_API_KEY },
   });
   if (!resp.ok) return [];
-  const data = await resp.json();
+  const data = await resp.json() as { web?: { results?: Array<{ title: string; description: string }> } };
   if (!data.web || !Array.isArray(data.web.results)) return [];
-  return data.web.results.map((r: any) => `${r.title}: ${r.description}`);
+  return data.web.results.map((r) => `${r.title}: ${r.description}`);
 }
 
 // Routes

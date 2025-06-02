@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import fetch from 'node-fetch';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
 import { CohereClient } from 'cohere-ai';
@@ -31,7 +30,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
     const res = await fetch(
       'https://generativelanguage.googleapis.com/v1/models?key=' + GEMINI_API_KEY
     );
-    const data: any = await res.json();
+    const data = await res.json() as { models?: Array<{ name: string }> };
     console.log('Available Gemini models for your API key:');
     if (data.models) {
       for (const m of data.models) {
