@@ -1,5 +1,9 @@
 # 🤖 BoTesh – AI-Powered Chatbot
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-BoTesh-blue?style=for-the-badge)](https://abhay3020.github.io/BoTesh-A-chat-bot/)
+
+Try the live chatbot here: **[https://abhay3020.github.io/BoTesh-A-chat-bot/](https://abhay3020.github.io/BoTesh-A-chat-bot/)**
+
 BoTesh is a modern, full-stack AI chatbot with a beautiful chat UI, markdown/code support, copy-to-clipboard, typing indicator, and real-time web search integration (Brave API). Built with React (frontend) and Node.js/Express (backend), powered by Llama 3 (Groq) and optional Hugging Face image captioning.
 
 ## 🌟 Features
@@ -95,4 +99,25 @@ BoTesh is a modern, full-stack AI chatbot with a beautiful chat UI, markdown/cod
 - Deploy backend to Render, Railway, or any Node.js host.
 
 ## 📄 License
-MIT 
+
+MIT License
+
+Copyright (c) 2024 Abhay Ambekar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
