@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export interface NewsArticle {
   title: string;
   source: string;
@@ -11,9 +9,9 @@ export async function getLiveNews(query: string): Promise<NewsArticle[]> {
   const apiKey = process.env.NEWS_API_KEY;
   const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}&pageSize=5&sortBy=publishedAt&language=en`;
   const res = await fetch(url);
-  const data: any = await res.json();
+  const data = await res.json() as { articles?: NewsArticle[], message?: string };
   if (!data.articles) {
-    console.error('NewsAPI error:', data);
+    console.error('NewsAPI error:', data.message || data);
     return [];
   }
   return data.articles.map((a: any) => ({
