@@ -4,7 +4,7 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import { createClient } from '@supabase/supabase-js';
-import { handleChat as originalHandleChat } from './controllers/chatController';
+import { handleChat as originalHandleChat } from './controllers/chatController.js';
 import multer from 'multer';
 import fetch from 'node-fetch';
 import { Request } from 'express';

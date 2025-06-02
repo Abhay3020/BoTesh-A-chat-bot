@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
 import { CohereClient } from 'cohere-ai';
-import { getLiveNews, formatNews } from './newsResolver';
+import { getLiveNews, formatNews } from './newsResolver.js';
 
 dotenv.config();
 
